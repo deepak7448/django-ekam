@@ -1,0 +1,6 @@
+Ekam Feedback Recieved
+
+Name: {{feedback_name}}
+Email ID: {{feedback_email}}
+Feedback: {{feedback}}
+

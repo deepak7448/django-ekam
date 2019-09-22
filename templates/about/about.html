@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+<title>About us</title>
+<link rel="stylesheet" href="{% static 'css/about.css' %}" />
+
+<section class="banner_area">
+<div class="container">
+<div class="banner_inner_content">
+<h3>About Us</h3>
+<div aria-label="breadcrumb">
+<ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+<li class="breadcrumb-item active" aria-current="page">About us</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section class="about-us">
+<div class="about-page">
+<div class="about-all">
+<div class="row">
+<div class="col-lg-6 col-md-12 col-sm-12">
+<div class="about-head">
+<h2>Welcome To <span>Ekam</span></h2>
+</div>
+<div class="about-contain">
+<h4>Enjoying an expansive beach along the lively coast, EkamVillas offers a completely different spa experience.</h4>
+</div>
+<div class="about-hotel">
+<p class="offset-top-20">Committed to everyone seeking energy and excitement, we offer endless possibilities to unwind and reenergise – 
+from a climbing wall to swimming pools, quiet spaces and a nature and sea-inspired spa as well activities for children and teens.</p>
+</div>
+<div class="more-hotel">
+<p class="offset-top-20">EkamVillas is the ideal place to get away to, for different reasons. You may just want a break from stress or to reboot your 
+system with a detoxification programme. Or, you may want to lose some kilograms and learn how to manage your weight. Alternatively, 
+you may wish to consult our Ayurveda practitioners, traditional Chinese medical practitioners or modern science doctors who are 
+dedicated to providing you a nurturing environment focused on holistic wellness, empowerment and education.</p>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 col-sm-12">
+<div class="about-right"> <img src="{% static 'img/aboutus2.jpg'%}" class="img-fluid" alt="Responsive image"> </div>
+</div>
+</div>
+</div>   
+</div>
+</section>
+{%endblock%}

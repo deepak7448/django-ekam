@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+body {
+  margin: 0%;
+  padding: 0%;
+  overflow-x: hidden;
+  font-family: 'Ubuntu', sans-serif;
+}
+.navbar{
+  background-color: rgba(0,0,0,.9);
+}
+.nav-link{
+text-transform: uppercase;
+}
+.navbar-brand {
+color: #fff;
+}
+.navbar .navbar-brand:hover{
+transition: all 150ms linear 0s;
+color: #6abe45;
+}
+.navbar-brand,.navbar-nav{
+margin: 0 15px;
+}
+.navbar-toggler {
+  color: #fff;
+  border-color: rgba(255, 255, 255,0.5);
+}
+.navbar-toggler:focus, .navbar-toggler:hover {
+  text-decoration: none;
+  background-color: #6abe45;
+  border: none;
+}
+button:focus{
+outline: none;
+}
+.navbar-nav .nav-link {
+color: #fff;
+}
+ .navbar-nav .active>.nav-link,
+.navbar-nav .nav-link:hover{
+transition: all 150ms linear 0s;
+color:#6abe45;
+}
+.navbar-nav .show>.nav-link {
+color: #6abe45;
+}
+.dropdown-menu {
+  min-width: 7rem;
+  padding: 0.5rem 0;
+  margin: 0.1rem 0px 0px;
+  background-color: #212529;
+  border-radius: .25rem;
+}
+.dropdown-item {
+color: #fff;
+}
+.dropdown-item:hover{
+  background-color:transparent;
+  color:#6abe45;
+}
+.slideIn {
+  -webkit-animation-name: slideIn;
+  animation-name: slideIn;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+  100% {
+    transform:translateY(0rem);
+    opacity: 1;
+  }
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+}
+
+@media (min-width: 300px) {
+  .animate {
+    animation-duration: 0.3s;
+    -webkit-animation-duration: 0.3s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar-nav .nav-link {
+    
+    padding-left: 15px;
+}
+
+}

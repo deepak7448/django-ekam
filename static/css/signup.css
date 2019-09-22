@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
+body {
+margin: 0%;
+padding: 0%;
+background: url("../img/15.png") no-repeat center center fixed;
+background-size: cover;
+font-family: 'Ubuntu', sans-serif;
+}
+
+.signup{
+padding-left: 35px;
+padding-right: 35px;
+}
+
+.card-signin {
+border: 0;
+border-radius: 1rem;
+margin-top: 7.5rem;
+box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+background-color: rgba(0,0,0,.6);
+}
+
+.form-control{
+padding-left: 2rem;
+}
+
+.body {
+-ms-flex: 1 1 auto;
+flex: 1 1 auto;
+padding: 0 1.5rem 0.3px;
+}
+
+.image img{
+  width: 100%;
+  height: 110px;
+  margin-top: -50px;
+}
+
+.title{
+margin-bottom: .75rem;
+color: #fff;
+}
+
+.fa {
+display: block;
+color: #47b418;
+font-size: 1rem;
+line-height: 1.2rem;
+line-height: 1;
+margin: .7rem .125rem .25rem .625rem;
+position: absolute;
+text-align: center;
+width: 16px;
+z-index: 999;
+}
+
+.btn{
+background-color: #6abe45;
+color: #fff;
+font-weight: 500;
+font-size: 18px;
+height: 48px;
+border-radius: 50px;
+transition: all 200ms linear 0s;
+}
+
+.btn:hover{
+color: #6abe45;
+background-color: #fff;
+}
+
+p{
+color: #fff;
+font-weight: 500;
+}
+a{
+  color: #47b418;
+}
+a:hover{
+  color: #47b418;
+}
+.errorlist{
+  list-style: none;
+  font-size: 17px;
+  color: #ff0000;
+  padding-left: 0px; 
+}
+@media only screen and (max-width: 1125px) {
+.signup{
+padding-left: 15px;
+padding-right: 15px;
+}
+}
+
+@media only screen and (min-width: 350px) and (max-width: 767px) {
+.card-signin {
+  margin-top: 7rem;
+}
+}
+@media only screen and (max-width: 575px) and (min-width: 500px) {
+.signup {
+padding-left: 50px;
+padding-right: 50px;
+}
+}

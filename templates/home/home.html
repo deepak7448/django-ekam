@@ -1,0 +1,233 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+
+<title>Welcome To Ekm</title>
+<link rel="stylesheet" href="{% static 'css/home.css' %}" />
+
+
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel"  data-intervel="5000">
+<div class="carousel-inner">
+<div class="carousel-caption ">
+<div class="container">
+<div data-aos="zoom-in">
+<h1 class="text first">Welcome To <span style="color:#6abe45;">Ekam</span></h1>
+<h3 class="text second ">Unlimited Luxury for Mind, Body and Soul</h3>
+<p class="text third">Visit EkamVillas resort to experience true relaxation from our spa services.
+<br> We can meet even the most demanding expectations..</p>
+<a href="#" class="btn btn-outline-light text-uppercase">Make a Booking</a>  
+</div>
+</div>
+</div>
+<div class="carousel-item active" style="background-image: url({% static 'img/7copy.jpg' %});"> 
+</div>
+<div class="carousel-item " style="background-image: url({% static 'img/1.jpg' %});"> 
+</div>
+<div class="carousel-item " style="background-image: url({%static 'img/6copy.jpg' %});"> 
+</div>
+<div class="carousel-item " style="background-image: url({%static 'img/5.jpg' %});">  
+</div> 
+<div class="carousel-item " style="background-image: url({%static 'img/2.jpg' %});"> 
+</div>
+<a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+<span class="carousel-control" aria-hidden="true"></span>
+<span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+<span class="carousel-control " aria-hidden="true"></span>
+<span class="sr-only">Next</span>
+</a>
+</div>
+</header>
+<div class="intro"><br>
+<div class="introduction">
+<div class="row">
+<div class="col-lg-12  col-sm-12">
+<div data-aos="zoom-in-up" >
+<div class="intro text-center">
+<h2 >INTRODUCTION OF RESORT<span></span></h2>
+<h4>Enjoying an expansive beach along the lively coast, EkamVillas offers a completely different spa experience.</h4>
+<p>Committed to everyone seeking energy and excitement, we offer endless possibilities to unwind and reenergise – from a climbing wall to swimming pools, quiet spaces and a nature and sea-inspired spa as well activities for children and teens.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="facilities">
+<div class="col-lg-12">
+<div class="row">
+<div data-aos="fade-down"class="col-lg-4  col-sm-12 hotel text-center">
+<i class="fas fa-building"></i>
+<h3 style="color:#fff;">Fabulous Resort</h3>
+<p>The resort is equipped with an outdoor pool, massage service and free Wi-Fi. This resort also has an on-site tour desk.</p>
+</div>
+<div data-aos="fade-down"  class="col-lg-4   col-sm-12 hotel text-center">
+<i class="fas fa-person-booth "></i>
+<h3 style="color:#fff;">Luxury Rooms</h3>
+<p>Luxury Rooms offer luminous floor to ceiling windows with warm lighting to create the perfect setting at night.</p>
+</div>
+<div data-aos="fade-down" class="col-lg-4  col-sm-12 hotel text-center">
+<i class="fas fa-car"></i>
+<h3 style="color:#fff;">Pickup & Drop</h3>
+<p>The pick and drop facility from airports and railway stations.Pick up and drop facility is one of ours luxury service for our customers. </p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="choose-hotel">
+<br><br>
+<div class="container">
+<div data-aos="zoom-out" >
+<h2 class="text-center title">WHY CHOOSE OUR <span>RESORT</span></h2>
+</div>
+<div class="row">
+<div class="col-lg-5 col-sm-12">
+<div data-aos="fade-right"  class="resot_list">
+<div class="list">
+<div>
+<i class="fa fa-caret-right" aria-hidden="true"></i>Wellness &amp; poll</div>
+<div>
+  <i class="fa fa-caret-right" aria-hidden="true"></i>Turiest Guide Support</div>
+<div>
+  <i class="fa fa-caret-right" aria-hidden="true"></i>Bar &amp; garden with terrace</div>
+<div>
+  <i class="fa fa-caret-right" aria-hidden="true"></i>Delicious breakfast</div>
+<div>
+  <i class="fa fa-caret-right" aria-hidden="true"></i>HIgh customer satisfaction</div>
+<div>
+  <i class="fa fa-caret-right" aria-hidden="true"></i>Good parking &amp; security</div>
+<div>
+  <i class="fa fa-caret-right" aria-hidden="true"></i>Clean room service</div>
+</div>
+</div>
+</div>
+<br>
+<div class="col-lg-7 col-sm-12">
+<div id="carouselExampleControls" class="carousel slide slider" data-ride="carousel">
+<div data-aos="fade-left" class="carousel-inner our-resort">
+<div class="carousel-item active choose" style="background-image: url({%static 'img/7.jpg' %});"> 
+</div> 
+<div class="carousel-item choose" style="background-image: url({%static 'img/3.jpg' %});"> 
+</div>
+<div class="carousel-item choose" style="background-image: url({%static 'img/6.jpg' %});"> 
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br><br><br>
+</div>
+<div data-aos="zoom-in-left"  class="jumbotron">
+<div class="text-center">
+<h2 class="room text-uppercase">Rooms</h2>
+<hr style="background:  #6abe45;width:80px;height: 1px;">
+<br>
+</div>
+<div class="row">
+{% for room in rooms %}
+<div class="col-md-6 col-lg-4">
+<div class="room-thumb-grid-1 bg-dark mb-4 shadow">
+<div class="thumb-top  overflow_hidden">
+<img src="{{room.image.url}}" class="hotel-room" alt="Booking Room"></div>
+<div class="room-info p-4">
+<div class="down-line-left mb-3 text-center">
+<h5 class="title "><a class="text-white" href="#">{{room.title}}</a></h5>
+<span>{{room.description}}</span> </div>
+<div class="h5 per-night text-white text-center">${{room.price}}<small>/Night</small></div>
+<div class="text-center">
+<i class="fas fa-wifi"></i>
+<i class="fas fa-coffee"></i>
+<i class="fas fa-utensils"></i>
+<i class="fas fa-tv"></i>
+</div>
+<div class="text-center">
+<button type="button" class="btn btn-info" data-toggle="modal" data-target=".bd-example-modal-xl">view more</button>
+<div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-xl" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<h1>work in process</h1>
+</div>
+</div>
+</div>
+</div>
+<a href="#" class="btn btn-info">Book Now</a>
+</div>
+</div>
+</div>
+</div>
+{%endfor%}
+</div>
+<br>
+<div class="text-center">
+<a href="{% url 'room' %}" class="btn btn-view">See All Room</a>
+</div>
+</div>  
+<div  data-aos="fade-up"class="offer">
+<div class="container">
+<div class="row row-offer">
+<div class="col-lg-12 col-md-12 col-sm-12">
+<div class="text-center">
+<div>
+<span class="ol-2"><i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+ <i class="fa fa-star"></i>
+</span>
+<h1 id="text" class="text-center">STANDARDIZED BUDGET ROOMS</h1>
+<hr style="background:#6abe45;width:110px;height: 1px;">
+<div class="text-center offer-head">
+<a class="fa-offer"><i class="fas fa-dumbbell "></i>Gym</a>
+<a class="fa-offer"><i class="fas fa-wifi "></i> Wi-Fi</a>
+<a class="fa-offer"><i class="fas fa-swimming-pool "></i>Pool</a>
+<a class="fa-offer"><i class="fas fa-utensils "></i>Breakfast</a>
+<a class="fa-offer"><i class="fas fa-tv "></i>Television</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div data-aos="fade-right"class="review">
+<div class="text-center">
+<br>
+<h3 class="guest-review text-uppercase">Tourist Reviews</h3>
+<hr style="background: #6abe45;width:120px;height: 1px;">
+<br>
+</div>
+<div class="row">
+{%for review in reviews%}
+<div class="col-md-6 col-lg-3">
+<div class="user-review">
+<div class="vcard d-flex mb-3">
+<div class="image"><img src="{{review.image.url}}" class="guest-img" alt="Person here"></div>
+<div class="name-text align-self-center">
+<h2 class="heading">{{review.name}}</h2>
+<span class="meta">{{review.customer}}</span>
+</div>
+</div>
+<div class="view">
+<blockquote>
+<p>{{review.description}}</p>
+</blockquote>
+</div>
+</div>
+</div>
+{%endfor%}
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,75 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="icon" href="{% static 'img/logo.png'%}" type="image/icon" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"/>
+<link rel="stylesheet" href="{% static 'css/signin.css' %}"  />
+</head>
+<body>
+
+<div class="container sign-in">
+<div class="row">
+<div class="col-md-6 col-lg-5 mx-auto">  
+<div class="ekam-login">
+<div class=image>
+<img class=img-responsive src="{% static 'img/user.svg' %}">
+</div><br>
+<div style="margin-right: 20px;margin-left: -20px;">
+{% if messages %}
+<ul class="messages">
+{% for message in messages %}
+<div class="alert alert-danger" style="text-align: center;"> {{ message }} </div>
+{% endfor %}
+</ul>
+{% endif %}
+</div>
+<div class="login">
+<h4 class="text-center">Ekam Sign In</h4>
+<br>
+<form method="POST" class="from-login">  
+{% csrf_token %}                  
+<div class="form-group input-group">
+<div class="input-group-prepend">
+<i class="fa fa-user"></i> 
+</div>
+<input name="user" type="Username" class="form-control" placeholder="Username or E-mail" required >
+</div>
+<div class="form-group input-group">
+<div class="input-group-prepend">
+<div class="input-group-prepend">
+<i class="fa fa-lock"></i> 
+</div>
+</div>
+<input name="password" type="password" class="form-control" placeholder="Password" required>
+</div>
+<button type="submit" class="btn btn-block text-uppercase"> sign in </button>
+<div class="text-center">
+<a href="{% url 'password_reset' %}">forget password ?</a> 
+</div>
+<p class="text-center my-3">Dont have an account? <a href="{% url 'signup' %}">Signup from here!</a></p>
+<hr class="my-3" style="background-color: #fff;">
+<h5 class="text-center text-uppercase my-3">Sign in with </h5>
+<div class="text-center offer-head">
+<a href="{% url 'social:begin' 'google-oauth2' %}"><button class="btn btn-google " type="button"><i class="fab fa-google mr-2"></i></button>
+<a href="{% url 'social:begin' 'facebook' %}"><button class="btn btn-facebook" type="button"><i class="fab fa-facebook-f mr-2"></i></button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</body>
+</html>

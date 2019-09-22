@@ -1,0 +1,7 @@
+A request has been recieved to add a new hotel to the database:-
+
+Name: {{name}}
+Phone:{{phone}}
+Email ID: {{email}}
+Subject: {{subjects}}
+Message: {{messages}}

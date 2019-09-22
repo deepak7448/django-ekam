@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+<title>Room</title>
+<link rel="stylesheet" href="{% static 'css/room.css' %}" />
+
+<section class="banner_area">
+<div class="container">
+<div class="banner_inner_content">
+<h3>Rooms</h3>
+<div aria-label="breadcrumb">
+<ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+<li class="breadcrumb-item active" aria-current="page">room</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+
+<div class="all-room">
+<div class="hotel-room">
+<div class="rooms">
+<div class="room-heading ">
+<h3 class="text-center text-uppercase">our best rooms</h3>
+<hr style="background: #6abe45;width:110px;height: 1px; margin-top: 0rem;">
+</div>
+</div>
+</div>
+</div>
+
+<section class="fill-row" style="background-color: #000;">
+<div class="best-room">
+<div class="row">
+{% for room in rooms %}
+<div class="col-md-6 col-lg-4">
+<div class="room-thumb-grid-1 bg-dark mb-4 shadow">
+<div class="thumb-top  overflow_hidden">
+<img src="{{room.image.url}}" class="hotel-room" width="100%" alt="Booking Room"></div>
+<div class="room-info p-4">
+<div class="down-line-left mb-3 text-center">
+<h5 class="title "><a class="text-white" href="">{{room.title}}</a></h5>
+<span>{{room.description}}</span> </div>
+<div class="h5 per-night text-white text-center">${{room.price}}<small>/Night</small></div>
+<div class="text-center">
+<i class="fas fa-wifi"></i>
+<i class="fas fa-coffee"></i>
+<i class="fas fa-utensils"></i>
+<i class="fas fa-tv"></i>
+</div>
+<div class="text-center">
+<button type="button" class="btn btn-book" data-toggle="modal" data-target=".bd-example-modal-xl">view more</button>
+<div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-xl" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<h1>work in process</h1>
+</div>
+</div>
+</div>
+</div>
+<a href="#" class="btn btn-book">Book Now</a>
+</div>
+</div>
+</div>
+</div>
+{% endfor %}
+</section>
+
+{%endblock%}

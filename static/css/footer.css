@@ -1,0 +1,134 @@
+.footer{
+    background-color: #201f20;
+    padding: 40px;
+  }
+  .personal-info,.service-list{
+    list-style: none;
+    text-decoration: none;
+    }
+  .submit-btn{
+  background-color: #6abe45;
+  color: #fff;
+  border-color: #6abe45;
+  border-radius: 0rem;
+  transition: all 0.2s ease-in-out;
+  }
+  .submit-btn:hover{
+    background-color: #2a292b;
+    color: #6abe45;
+    border-color: #6abe45;
+    }
+  .personal-info{
+    padding-left: 0;
+    margin-left: -10px;
+  }
+  .footer-info .personal-info li{
+    color: #fff;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding-left: 40px;
+  }
+  .footer-info .personal-info li i {
+    font-size: 18px;
+    float: left;
+    left: 0;
+    position: absolute;
+    margin-top: 0;
+  }
+  .service-list{
+   padding-left: 25px
+  }
+  .service-list li{
+   margin-bottom: 10px;
+  }
+  .service-list li a{
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease-in-out;
+  }
+  .service-list li a:hover{
+  color: #6abe45;
+  }
+  .service-list li i{
+   position:absolute;
+   margin: 5px;
+   left: 10px;
+  }
+  .footer-item {
+    margin-bottom: 30px;
+    width: 100%;
+    float: left;
+    color: white;
+  }
+  .footer-item p{
+    font-size: 14px;
+  }
+  .about,.contact,.service,.feedback{
+    margin-bottom: 25px;
+  }
+  .footer-item h4{
+    position: relative;
+  }
+  .footer-item h4::after{
+    content: "";
+    width: 70px;
+    height: 1px;
+    background: #6abe45;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+  }
+  .personal-info .fas,.service-list .fa{
+    color: #6abe45;
+  }
+  .form-control{
+    margin-bottom: 5px;
+  }
+  .form-control:focus {
+    box-shadow: none;
+  }
+  .social-links a{
+    display: inline-block;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    color: #fff;
+    padding: 7px;
+    margin: 5px;
+    font-size: 22px;
+    border: 1px solid white;
+    text-align: center;
+    transition:all 0.2s ease-in-out;
+  }
+  .instagram:hover,.facebook:hover,.google-plus:hover,.linkedin:hover{
+    background-color: #6abe45;
+    border-color: #6abe45;
+  }
+  .full-row{
+    padding: 20px;
+    background-color: #1c1c1d;
+  }
+  .copyright{
+    color: #fff;
+  }
+  .btn:focus{
+    box-shadow:none;
+  }
+  .form-control{
+    border-radius: 0rem;
+  }
+  @media only screen and  (max-width: 460px) {
+    .copyright {
+      font-size: 14px;
+  } 
+  }
+  
+  @media only screen and  (max-width: 375px) {
+    .copyright {
+      font-size: 12px;
+    }
+  }
