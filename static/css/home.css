@@ -332,6 +332,10 @@ background-color: #212529;
   color: gray;
 }
 
+.emoji{
+  width: auto;
+}
+
 #scrollUp {
   bottom: 15px;
   right: 15px;

@@ -24,6 +24,7 @@ urlpatterns = [
     path('', include('booking.urls')),
     path('', include('room.urls')),
     path('', include('contact.urls')),
+    path('emoji/', include('emoji.urls')),
 ]
 urlpatterns +=  static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns +=  static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

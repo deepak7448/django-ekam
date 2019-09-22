@@ -127,6 +127,10 @@ background-color: #4caf50;
 color: #fff!important;
 }
 
+.emoji{
+  width: auto;
+}
+
 #scrollUp {
   bottom: 15px;
   right: 15px;

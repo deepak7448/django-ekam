@@ -6,6 +6,7 @@ defusedxml==0.6.0
 Django==2.2.5
 django-bootstrap==0.2.4
 django-crispy-forms==1.7.2
+django-emoji==2.2.2
 django-static-jquery==2.1.4
 freeze==1.0.10
 idna==2.8
